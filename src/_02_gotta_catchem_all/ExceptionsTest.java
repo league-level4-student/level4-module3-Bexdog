@@ -33,6 +33,13 @@ class ExceptionsTest {
 	@Test
 	public void testDivideByZeroException() {
 		
+		assertEquals(0.2,ExceptionMethods.divide(1.0, 5.0));
+		try {
+			ExceptionMethods.divide(1.0, 0.0);
+		}
+		catch(IllegalArgumentException e){
+			e.printStackTrace();
+		}
 	}
 	
 	//4. In the ExceptionMethods class, write a method called reverseString that takes a
@@ -42,7 +49,13 @@ class ExceptionsTest {
 	//5. Complete the JUnit test method to test the reverseStringMethod.
 	@Test
 	public void testReverseString() {
-		
+		assertEquals("looc",ExceptionMethods.reverseString("cool"));
+		try {
+			ExceptionMethods.reverseString("");
+		}
+		catch(IllegalStateException e){
+			e.printStackTrace();
+		}
 	}
 	
 	
